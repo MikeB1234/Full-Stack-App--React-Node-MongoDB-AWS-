@@ -1,6 +1,6 @@
 import './App.css';
 import HomePage from './pages/HomePage';
-import ArticleList from './pages/ArticleList';
+import ArticleListPage from './pages/ArticleListPage';
 import AboutPage from './pages/AboutPage';
 import ArticlePage from './pages/ArticlePage';
 import NavBar from './NavBar';
@@ -16,12 +16,12 @@ function App() {
             <Route exact path='/' element={<HomePage />} />
             <Route exact path='/about' element={<AboutPage />} />
             <Route exact path='/article/:name' element={<ArticlePage />} />
-            <Route exact path='/article-list' element={<ArticleList />} />
+            <Route exact path='/article-list' element={<ArticleListPage />} />
           </Routes>
         </div>
       </div>
     </Router >
-  );
+  )
 }
 
 export default App;
