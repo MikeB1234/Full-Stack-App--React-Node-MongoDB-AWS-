@@ -4,6 +4,7 @@ import ArticleListPage from './pages/ArticleListPage';
 import AboutPage from './pages/AboutPage';
 import ArticlePage from './pages/ArticlePage';
 import NavBar from './NavBar';
+import NotFoundPage from './pages/NotFoundPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -14,9 +15,10 @@ function App() {
         <div id='page-body' >
           <Routes>
             <Route exact path='/' element={<HomePage />} />
-            <Route exact path='/about' element={<AboutPage />} />
-            <Route exact path='/article/:name' element={<ArticlePage />} />
-            <Route exact path='/article-list' element={<ArticleListPage />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/article/:name' element={<ArticlePage />} />
+            <Route path='/article-list' element={<ArticleListPage />} />
+            <Route path='*' element={<NotFoundPage />} />
           </Routes>
         </div>
       </div>
