@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import articleContent from './Article-Content'
 import ArticlesList from '../components/ArticlesList';
 import NotFoundPage from './NotFoundPage';
+import CommentsList from '../components/CommentsList';
 
 export const ArticlePage = () => {
 
@@ -33,6 +34,7 @@ export const ArticlePage = () => {
             {article.content.map((paragraph, key) => {
                 return <p key={key}>{paragraph}</p>
             })}
+            <CommentsList comments={articleInfo.comments} />
             <h3>Other Articles:</h3>
             <ArticlesList articles={otherArticles} />
         </>
